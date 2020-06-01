@@ -1,17 +1,6 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  // state = {
-  //   value: this.props.counter.value,
-  //   tags: ["tag1", "tag2", "tag3"]
-  // }; <- omit - it controlled by parent component
-
-  // constructor() {
-  //   super();
-  //   this.handleIncrement = this.handleIncrement.bind(this);
-  // }
-
-  // conditional rendering
   renderTags() {
     if (this.props.counter.tags.length === 0) return <p>There is no tags!</p>;
 
@@ -23,11 +12,7 @@ class Counter extends Component {
       </ul>
     );
   }
-
-  // handleIncrement = () => {
-  //   // console.log("I am increment", this);
-  //   this.setState({ value: this.state.value + 1 }); // <- updating the state with setState after changing state value
-  // }; <- omit - now it controlled by parent component
+  
   render() {
     console.log("props", this.props);
     return (
